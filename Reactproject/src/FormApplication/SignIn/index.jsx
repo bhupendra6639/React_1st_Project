@@ -29,7 +29,7 @@ function SignIn() {
     }
     let navigate = useNavigate();
     const handlesubmite = (e) => {
-        e.preventDefault();
+        // e.preventDefault();
         if (passworld !== confirmPassworld) {
             alert("passworld not match")
         }

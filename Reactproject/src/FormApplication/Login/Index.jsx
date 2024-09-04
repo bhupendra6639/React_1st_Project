@@ -1,14 +1,55 @@
 import '../Login/Styles/Login.css'
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import CustomApi from '../../CustomApi/CustomApi';
 function LoginIn() {
     const [email, setEmail] = useState("");
+    const [notaccount, SetNotAccount] = useState(true)
     const [passworld, setPassworld] = useState("");
+    const {
+        data: LoginData
+    } = CustomApi({ url: "http://localhost:3000/Sign_In_Data" })
     const handleEmail = (e) => {
         setEmail(e.target.value);
+        let temp = e.target.value;
+        let found = false;
+        for (let i = 0; i < LoginData.length; i++) {
+            const keys = LoginData[i];
+            if (keys.email === temp) {
+                found = true;
+                break;
+            }
+            else {
+                continue;
+            }
+        }
+        if (!found) {
+            return (SetNotAccount(false))
+        }
+        else {
+            return (SetNotAccount(true))
+        }
     }
     const handlePassworld = (e) => {
         setPassworld(e.target.value)
+        let temp = e.target.value;
+        let found = false;
+        for (let i = 0; i < LoginData.length; i++) {
+            const keys = LoginData[i];
+            if (keys.passworld === temp) {
+                found = true;
+                break;
+            }
+            else {
+                continue;
+            }
+        }
+        if (!found) {
+            return (SetNotAccount(false))
+        }
+        else {
+            return (SetNotAccount(true))
+        }
     }
     let navigat = useNavigate();
     const handlesubmite = (e) => {
@@ -32,6 +73,9 @@ function LoginIn() {
                 <form action="" className='loginWrapper' onSubmit={handlesubmite}>
                     <h2>Login to your account</h2>
                     <div className="logincontent">
+                        {
+                            notaccount ? <></> : ("NOT Match")
+                        }
                         <div className="LoginformWrapper">
                             <label htmlFor="Email">Email</label>
                             <input type="email" name="passworld" value={email} onChange={handleEmail} placeholder="Email" />
