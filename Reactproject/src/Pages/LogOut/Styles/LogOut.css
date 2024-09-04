@@ -1,0 +1,120 @@
+.homePage {
+    background: linear-gradient(27deg, #077b3a, #102a1c, #020700, #077b3a);
+    width: 100%;
+    height: 100%;
+}
+
+.movieNavigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 1rem 0.5rem 3rem;
+    gap: 930px;
+}
+
+.SvgWrapperMovie {
+    width: 100%;
+    height: 100%;
+}
+
+.navregister {
+    display: flex;
+    gap: 15px;
+}
+
+.navregister button {
+    font-size: 16px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+}
+
+.navregister .log-Out {
+    background: rgba(220, 0, 0, 1);
+}
+
+.navregister a {
+    color: white;
+}
+
+.navregister .ticket span {
+    padding: 3px;
+}
+
+.navregister .ticket {
+    background-color: transparent;
+    color: black;
+    padding: 5px 20px;
+}
+
+/* ################################ */
+.moviesSections {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    padding-bottom: 10px;
+}
+
+.heading-Showing {
+    text-align: center;
+}
+
+.heading-Showing span {
+    text-transform: capitalize;
+    font-family: Poppins;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 46px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.movies {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 16px;
+    color: white;
+    text-transform: capitalize;
+    font-family: Poppins;
+
+}
+
+.moviesWrappers1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.moviesWrappers1 .moviewrap {
+    width: 100%;
+    height: 100%;
+
+}
+
+.moviesWrappers1 .moviewrap img {
+    /* margin-top: 5px; */
+    width: 200px;
+    height: 240px;
+}
+
+.moviesWrappers2 {
+    display: flex;
+    justify-content: center;
+    /* gap: 20px; */
+    font-size: 16px;
+    color: white;
+    text-transform: capitalize;
+    font-family: Poppins;
+    padding-bottom: 5px;
+}
+
+.moviesWrappers2 .moviewrap {
+    width: 100%;
+    height: 100%;
+
+}
+
+.moviesWrappers2 .moviewrap img {
+    width: 200px;
+    height: 240px;
+}
