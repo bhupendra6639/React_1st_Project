@@ -1,8 +1,20 @@
+/*************Login  page Container ***********/
+
 .login-Container {
     background: linear-gradient(27deg, #077b3a, #102a1c, #020700, #077b3a);
     height: 705px;
     position: relative;
 }
+
+/* ***************Circle Loader******************* */
+.circleLoader {
+    width: 300px;
+    position: absolute;
+    top: 200px;
+    left: 520px;
+}
+
+/*************Login Container ***********/
 
 .loginWrapper {
     text-transform: none;
@@ -10,15 +22,17 @@
     background-color: white;
     display: flex;
     flex-direction: column;
-    width: 400px;
+    width: 450px;
     height: auto;
     margin: 0 auto;
-    padding: 2rem 0rem 1rem 2rem;
+    padding: 1rem 0rem 1rem 2rem;
     border-radius: 10px;
     top: 150px;
     left: 500px;
+    box-shadow: 1px 3px 10px 0px wheat;
 }
 
+/*************Login Form Container ***********/
 
 .logincontent {
     display: flex;
@@ -26,23 +40,29 @@
     gap: 15px;
     color: rgba(90, 90, 93, 1);
 
+
 }
+
+/*************Login input Wrapper ***********/
 
 .logincontent .LoginformWrapper {
     display: flex;
     flex-direction: column;
     gap: 10px;
+
 }
 
 .loginWrapper input {
-    width: 360px;
+    width: 400px;
     height: 40px;
     border-radius: 5px;
 }
 
+/*************Login List  ***********/
 .loginWrapper ul {
-    text-align: left;
-    margin-top: -2px;
+    /* text-align: center; */
+    margin-top: 0px;
+    margin-left: 10px;
 }
 
 .loginWrapper ul li {
@@ -53,6 +73,8 @@
 .loginWrapper ul li :first-child {
     padding: 0;
 }
+
+/*************Login to Submite ***********/
 
 .LoginformWrapper .submite {
     background: rgba(29, 231, 130, 1);

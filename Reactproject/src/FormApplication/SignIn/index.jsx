@@ -3,30 +3,67 @@ import '../SignIn/Styles/SignIn.css'
 import { Link, useNavigate } from 'react-router-dom'
 import movies from '/Movie.svg'
 import CustomApi from "../../CustomApi/CustomApi";
+import CircleLoad from "/LoadingSvg/Infinity.svg"
 function SignIn() {
     const [email, setEmail] = useState("");
     const [passworld, setPassworld] = useState("");
     const [confirmPassworld, setConfirmPassworld] = useState("");
+
+    //    (************ API FETCH TO REGRISTRATION **************)
+
     const {
-        data: signindata
+        data: signindata,
+        loading: Loader
     } = CustomApi({ url: "http://localhost:3000/Sign_In_Data" })
 
+    //    (************ Email Function For REGRISTRATION **************)
+
+    const [emailverified, SetEmailVerified] = useState(true)
+
     const handleEmail = (e) => {
-        let temp = e.target.value;
+        // let temp = e.target.value;
+        // setEmail(e.target.value);
+        // console.log(signindata)
+        // signindata.map((data) => {
+        //     if (data.email === temp) {
+        //         alert("email alredy exist")
+        //     }
+        // })
         setEmail(e.target.value);
-        console.log(signindata)
-        signindata.map((data) => {
-            if (data.email === temp) {
-                alert("email alredy exist")
+        let temp = e.target.value;
+        let found = false;
+        for (let i = 0; i < signindata.length; i++) {
+            const keys = signindata[i];
+            if (keys.email === temp) {
+                found = true;
+                break;
             }
-        })
+            else {
+                continue;
+            }
+        }
+        if (!found) {
+            return (SetEmailVerified(false))
+        }
+        else {
+            return (SetEmailVerified(true))
+        }
     }
+
+    //    (************ Passworld Function For REGRISTRATION **************)
+
     const handlePassworld = (e) => {
         setPassworld(e.target.value)
     }
+
+    //    (************ ConfirmPassworld Function For REGRISTRATION **************)
+
     const handleConfirmPassworld = (e) => {
         setConfirmPassworld(e.target.value)
     }
+
+    //    (************ Submite Function For REGRISTRATION **************)
+
     let navigate = useNavigate();
     const handlesubmite = (e) => {
         // e.preventDefault();
@@ -52,40 +89,46 @@ function SignIn() {
     }
     return (
         <>
-            <div className="formContainer">
-                <div className="cinemaTicket">
-                    <div className="SvgWrapperMovie">
-                        <img src={movies} alt="" />
+            {
+                Loader ? <img src={CircleLoad} alt="" srcset="" className="circleLoader" /> : <div className="formContainer">
+                    <div className="cinemaTicket">
+                        <div className="SvgWrapperMovie">
+                            <img src={movies} alt="" />
+                        </div>
+                        <span>Welcome.
+                            Begin your cinematic adventure now with our ticketing platform!</span>
                     </div>
-                    <span>Welcome.
-                        Begin your cinematic adventure now with our ticketing platform!</span>
-                </div>
-                <div className="formcontent">
-                    <form action="" className="SignInSection" onSubmit={handlesubmite}>
-                        <span>Create an account</span>
-                        <div className="formWrapper">
-                            <label htmlFor="Email">Email</label>
-                            <input type="email" name="passworld" value={email} onChange={handleEmail} placeholder="Email" />
-                        </div>
-                        <div className="formWrapper">
-                            <label htmlFor="passworld">passworld</label>
-                            <input type="password" name="password" minlength="8" required placeholder="passworld" value={passworld} onChange={handlePassworld} />
-                            <input type="password" name="confirm-Passworld" minlength="8" required placeholder="passworld" value={confirmPassworld} onChange={handleConfirmPassworld} />
+                    <div className="formcontent">
+                        <form action="" className="SignInSection" onSubmit={handlesubmite}>
+                            <span>Create an account</span>
+                            {
+                                emailverified ? (email ? <small>email alredy verified</small> : <></>) : <></>
+                            }
+                            <div className="formWrapper">
+                                <label htmlFor="Email">Email</label>
+                                <input type="email" name="passworld" value={email} onChange={handleEmail} placeholder="Email" />
+                            </div>
+                            <div className="formWrapper">
+                                <label htmlFor="passworld">passworld</label>
+                                <input type="password" name="password" minlength="8" required placeholder="Passworld" value={passworld} onChange={handlePassworld} />
+                                <input type="password" name="confirm-Passworld" minlength="8" required placeholder="Confirm Passworld" value={confirmPassworld} onChange={handleConfirmPassworld} />
 
-                        </div>
+                            </div>
 
-                        <div className="formWrapper">
-                            <input type="submit" className="submite" value="Create account" />
-                        </div>
-                        <div className="formWrapper">
-                            <ul>
-                                <li>Already have an account ?</li>
-                                <li><Link to={"/LogIn"}>Log in</Link></li>
-                            </ul>
-                        </div>
-                    </form>
-                </div>
-            </div>
+                            <div className="formWrapper">
+                                <input type="submit" className="submite" value="Create account" />
+                            </div>
+                            <div className="formWrapper">
+                                <ul>
+                                    <li>Already have an account ?</li>
+                                    <li><Link to={"/LogIn"}>Log in</Link></li>
+                                </ul>
+                            </div>
+                        </form>
+                    </div >
+                </div >
+
+            }
         </>
     );
 };

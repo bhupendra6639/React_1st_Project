@@ -11,24 +11,6 @@
       "name": "Bhupendra",
       "email": "bhupendrpatil6639@gmail.com",
       "passworld": "bhupendra"
-    },
-    {
-      "id": "3bf8",
-      "email": "bhupendra111patil@gmail.com",
-      "passworld": "bhupendra",
-      "confirmPassworld": "bhupendra"
-    },
-    {
-      "id": "7f7a",
-      "email": "prathammahajan@gamil.com",
-      "passworld": "bhupendra",
-      "confirmPassworld": "bhupendra"
-    },
-    {
-      "id": "2afe",
-      "email": "vishalpatil6639@gmail.com",
-      "passworld": "vishal6639",
-      "confirmPassworld": "vishal6639"
     }
   ],
   "Login_Data": [
@@ -51,6 +33,21 @@
       "id": "0dc9",
       "email": "vishalpatil6639@gmail.com",
       "passworld": "vishal6639"
+    },
+    {
+      "id": "ac4e",
+      "email": "vishalpatil@gmail.com",
+      "passworld": "vishaldada"
+    },
+    {
+      "id": "7ef5",
+      "email": "prathammahajan@gamil.com",
+      "passworld": "bhupendra"
+    },
+    {
+      "id": "789b",
+      "email": "prathammahajan@gamil.com",
+      "passworld": "bhupendra"
     }
   ]
 }
