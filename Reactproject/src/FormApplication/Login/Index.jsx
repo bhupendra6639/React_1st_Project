@@ -13,8 +13,10 @@ function LoginIn() {
 
     const {
         data: LoginData,
-        loading: Loader
+        loading: Loader,
+        error: logInError
     } = CustomApi({ url: "http://localhost:3000/Sign_In_Data" })
+
     const handleEmail = (e) => {
         setEmail(e.target.value);
         let temp = e.target.value;
@@ -78,34 +80,35 @@ function LoginIn() {
     return (
         <>
             {
-                Loader ? <img src={CircleLoad} alt="" srcset="" className="circleLoader" /> : <div className="login-Container">
-                    <form action="" className='loginWrapper' onSubmit={handlesubmite}>
-                        <h2>Login to your account</h2>
-                        <div className="logincontent">
-                            {
-                                notaccount ? <></> : ("NOT Match")
-                            }
-                            <div className="LoginformWrapper">
-                                <label htmlFor="Email">Email</label>
-                                <input type="email" name="passworld" value={email} onChange={handleEmail} placeholder="Email" />
+                logInError ? <h2>{logInError}</h2> :
+                    Loader ? <img src={CircleLoad} alt="" srcset="" className="circleLoader" /> : <div className="login-Container">
+                        <form action="" className='loginWrapper' onSubmit={handlesubmite}>
+                            <h2>Login to your account</h2>
+                            <div className="logincontent">
+                                {
+                                    notaccount ? <></> : ("NOT Match")
+                                }
+                                <div className="LoginformWrapper">
+                                    <label htmlFor="Email">Email</label>
+                                    <input type="email" name="passworld" value={email} onChange={handleEmail} placeholder="Email" />
+                                </div>
+                                <div className="LoginformWrapper">
+                                    <label htmlFor="passworld">passworld</label>
+                                    <input type="password" name="password" minlength="8" required placeholder="Passworld" value={passworld} onChange={handlePassworld} />
+                                </div>
+                                <div className="LoginformWrapper">
+                                    <input type="submit" className="submite" />
+                                </div>
+                                <div className="LoginformWrapper">
+                                    <ul>
+                                        <li>Don't have an account ?</li>
+                                        <li><Link to={"/register-Here"}>register Here</Link></li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div className="LoginformWrapper">
-                                <label htmlFor="passworld">passworld</label>
-                                <input type="password" name="password" minlength="8" required placeholder="Passworld" value={passworld} onChange={handlePassworld} />
-                            </div>
-                            <div className="LoginformWrapper">
-                                <input type="submit" className="submite" />
-                            </div>
-                            <div className="LoginformWrapper">
-                                <ul>
-                                    <li>Don't have an account ?</li>
-                                    <li><Link to={"/register-Here"}>register Here</Link></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </form>
+                        </form>
 
-                </div>
+                    </div>
 
             }
         </>

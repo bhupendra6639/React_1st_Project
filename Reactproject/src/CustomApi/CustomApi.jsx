@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react'
 function CustomApi({ url }) {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
     useEffect(() => {
         setLoading(true);
         setTimeout(() => {
@@ -13,11 +15,15 @@ function CustomApi({ url }) {
                     setLoading(false);
                     setData(data);
                 })
+                .catch((err) => {
+                    setError(err.message)
+                })
         }, 1000);
     }, [])
     return {
         data,
-        loading
+        loading,
+        error
     }
 };
 export default CustomApi;

@@ -13,7 +13,8 @@ function SignIn() {
 
     const {
         data: signindata,
-        loading: Loader
+        loading: Loader,
+        error: signInError
     } = CustomApi({ url: "http://localhost:3000/Sign_In_Data" })
 
     //    (************ Email Function For REGRISTRATION **************)
@@ -90,43 +91,44 @@ function SignIn() {
     return (
         <>
             {
-                Loader ? <img src={CircleLoad} alt="" srcset="" className="circleLoader" /> : <div className="formContainer">
-                    <div className="cinemaTicket">
-                        <div className="SvgWrapperMovie">
-                            <img src={movies} alt="" />
+                signInError ? <h2>{signInError}</h2> :
+                    Loader ? <img src={CircleLoad} alt="" srcset="" className="circleLoader" /> : <div className="formContainer">
+                        <div className="cinemaTicket">
+                            <div className="SvgWrapperMovie">
+                                <img src={movies} alt="" />
+                            </div>
+                            <span>Welcome.
+                                Begin your cinematic adventure now with our ticketing platform!</span>
                         </div>
-                        <span>Welcome.
-                            Begin your cinematic adventure now with our ticketing platform!</span>
-                    </div>
-                    <div className="formcontent">
-                        <form action="" className="SignInSection" onSubmit={handlesubmite}>
-                            <span>Create an account</span>
-                            {
-                                emailverified ? (email ? <small>email alredy verified</small> : <></>) : <></>
-                            }
-                            <div className="formWrapper">
-                                <label htmlFor="Email">Email</label>
-                                <input type="email" name="passworld" value={email} onChange={handleEmail} placeholder="Email" />
-                            </div>
-                            <div className="formWrapper">
-                                <label htmlFor="passworld">passworld</label>
-                                <input type="password" name="password" minlength="8" required placeholder="Passworld" value={passworld} onChange={handlePassworld} />
-                                <input type="password" name="confirm-Passworld" minlength="8" required placeholder="Confirm Passworld" value={confirmPassworld} onChange={handleConfirmPassworld} />
+                        <div className="formcontent">
+                            <form action="" className="SignInSection" onSubmit={handlesubmite}>
+                                <span>Create an account</span>
+                                {
+                                    emailverified ? (email ? <small>email alredy verified</small> : <></>) : <></>
+                                }
+                                <div className="formWrapper">
+                                    <label htmlFor="Email">Email</label>
+                                    <input type="email" name="passworld" value={email} onChange={handleEmail} placeholder="Email" />
+                                </div>
+                                <div className="formWrapper">
+                                    <label htmlFor="passworld">passworld</label>
+                                    <input type="password" name="password" minlength="8" required placeholder="Passworld" value={passworld} onChange={handlePassworld} />
+                                    <input type="password" name="confirm-Passworld" minlength="8" required placeholder="Confirm Passworld" value={confirmPassworld} onChange={handleConfirmPassworld} />
 
-                            </div>
+                                </div>
 
-                            <div className="formWrapper">
-                                <input type="submit" className="submite" value="Create account" />
-                            </div>
-                            <div className="formWrapper">
-                                <ul>
-                                    <li>Already have an account ?</li>
-                                    <li><Link to={"/LogIn"}>Log in</Link></li>
-                                </ul>
-                            </div>
-                        </form>
+                                <div className="formWrapper">
+                                    <input type="submit" className="submite" value="Create account" />
+                                </div>
+                                <div className="formWrapper">
+                                    <ul>
+                                        <li>Already have an account ?</li>
+                                        <li><Link to={"/LogIn"}>Log in</Link></li>
+                                    </ul>
+                                </div>
+                            </form>
+                        </div >
                     </div >
-                </div >
 
             }
         </>
