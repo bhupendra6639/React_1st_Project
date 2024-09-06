@@ -80,7 +80,7 @@ function LoginIn() {
     return (
         <>
             {
-                logInError ? <h2>{logInError}</h2> :
+                logInError ? <h2 className='Error'>404 {logInError}</h2> :
                     Loader ? <img src={CircleLoad} alt="" srcset="" className="circleLoader" /> : <div className="login-Container">
                         <form action="" className='loginWrapper' onSubmit={handlesubmite}>
                             <h2>Login to your account</h2>

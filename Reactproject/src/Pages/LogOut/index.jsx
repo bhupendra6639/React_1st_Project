@@ -18,7 +18,7 @@ function LogOut() {
     return (
         <>
             {
-                loadError ? <h2>{loadError}</h2> :
+                loadError ? <h2 className='Error'>404{loadError}</h2> :
                     homeLoader ? <img src={CircleLoad} alt="" className="circleLoader" /> : <div className="homePage">
                         <div className="movieNavigation">
                             <div className="SvgWrapperMovie">

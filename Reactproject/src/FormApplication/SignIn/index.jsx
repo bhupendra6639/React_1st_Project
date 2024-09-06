@@ -91,7 +91,7 @@ function SignIn() {
     return (
         <>
             {
-                signInError ? <h2>{signInError}</h2> :
+                signInError ? <h2 className='Error'>404 {signInError}</h2> :
                     Loader ? <img src={CircleLoad} alt="" srcset="" className="circleLoader" /> : <div className="formContainer">
                         <div className="cinemaTicket">
                             <div className="SvgWrapperMovie">
