@@ -1,11 +1,12 @@
 import "../LogOut/Styles/LogOut.css"
 import movie from "/Movie.svg"
-import movie1 from "/image 1.svg"
-import movie2 from "/image 2.svg"
-import movie3 from "/image 3.svg"
-import movie4 from "/image 4.svg"
-import movie5 from "/image 5.svg"
-import movie6 from "/image 6.svg"
+import movie1 from "/MoviesSvg/image 1.svg"
+import movie2 from "/MoviesSvg/image 2.svg"
+import movie3 from "/MoviesSvg/image 3.svg"
+import movie4 from "/MoviesSvg/image 4.svg"
+import movie5 from "/MoviesSvg/image 5.svg"
+import movie6 from "/MoviesSvg/image 6.svg"
+
 import CircleLoad from "/LoadingSvg/Circle.svg";
 import CustomApi from "../../CustomApi/CustomApi"
 
@@ -14,7 +15,17 @@ function LogOut() {
     const {
         loading: homeLoader,
         error: loadError
-    } = CustomApi({ url: "http://localhost:3000/Sign_In_Data" })
+    } = CustomApi({ url: "http://localhost:3000/Sign_Up_Data" })
+    const {
+        data: movieImgUrl1st
+
+    } = CustomApi({ url: "http://localhost:3000/movies_first_row" })
+
+    const {
+        data: movieImgUrl2nd
+
+    } = CustomApi({ url: "http://localhost:3000/movies_second_row" })
+
     return (
         <>
             {
@@ -26,51 +37,37 @@ function LogOut() {
                             </div>
                             <div className="navregister">
                                 <button className="ticket"><Link to='/LogIn'><span>My</span><span>Ticket</span></Link></button>
-                                <button className="log-Out"><Link to='/register-Here'>Logout</Link></button>
+                                <button className="log-Out"><Link to='/home'>Logout</Link></button>
                             </div>
                         </div>
-                        <div className="moviesSections">
-                            <div className="heading-Showing" >
-                                <span>Now Showing</span>
-                            </div>
-                            <div className="movies">
-                                <div className="moviesWrappers1">
-                                    <div className="moviewrap">
-                                        <img src={movie1} alt="" />
-                                    </div>
-                                    <span>movie title</span>
+                        <div className="logOutMovieContainer">
+                            <h2>Now Showing</h2>
+                            <div className="moviesTemplates">
+                                <div className="moviesWrappers">
+                                    {
+                                        movieImgUrl1st.map((index) => {
+                                            return (
+                                                <div className="movieImgWrapper" key={index.id}>
+                                                    <img src={index.url} alt="" />
+                                                    <span>movie title</span>
+                                                </div>
+
+                                            )
+                                        })
+                                    }
                                 </div>
-                                <div className="moviesWrappers1">
-                                    <div className="moviewrap">
-                                        <img src={movie2} alt="" />
-                                    </div>
-                                    <span>movie title</span>
-                                </div>
-                                <div className="moviesWrappers1">
-                                    <div className="moviewrap">
-                                        <img src={movie3} alt="" />
-                                    </div>
-                                    <span>movie title</span>
-                                </div>
-                                <div className="moviesWrappers1">
-                                    <div className="moviewrap">
-                                        <img src={movie4} alt="" />
-                                    </div>
-                                    <span>movie title</span>
-                                </div>
-                            </div>
-                            <div className="moviesWrappers2">
-                                <div className="moviesWrappers1">
-                                    <div className="moviewrap">
-                                        <img src={movie5} alt="" />
-                                    </div>
-                                    <span>movie title</span>
-                                </div>
-                                <div className="moviesWrappers1">
-                                    <div className="moviewrap">
-                                        <img src={movie6} alt="" />
-                                    </div>
-                                    <span>movie title</span>
+                                <div className="moviesWrappers">
+                                    {
+                                        movieImgUrl2nd.map((index) => {
+                                            return (
+                                                <div className="movieImgWrapper" key={index.id}>
+                                                    <img src={index.url} alt="" />
+                                                    <span>movie title</span>
+                                                </div>
+
+                                            )
+                                        })
+                                    }
                                 </div>
                             </div>
                         </div>

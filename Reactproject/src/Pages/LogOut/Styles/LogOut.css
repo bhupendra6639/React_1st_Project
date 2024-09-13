@@ -83,89 +83,66 @@
 
 /* ************* MOVIE CONTAINER  *************** */
 
-.moviesSections {
+/* ************* MOVIE CONTAINER  *************** */
+
+.logOutMovieContainer {
     display: flex;
     flex-direction: column;
-    gap: 13px;
-    padding-bottom: 10px;
-}
-
-/* *************SHOW  HEADING*************** */
-
-.heading-Showing {
+    padding-bottom: 8px;
     text-align: center;
+    gap: 10px;
 }
 
 /* *************SHOW HEADING TEXT  *************** */
 
-.heading-Showing span {
+.logOutMovieContainer h2 {
     text-transform: capitalize;
     font-family: Poppins;
     font-size: 40px;
     font-weight: 700;
     line-height: 46px;
     color: rgba(255, 255, 255, 1);
+    margin: 0;
 }
 
 /* ************* MOVIES COLUMN IMGES CONTAINER *************** */
-
-.movies {
+.moviesTemplates {
+    margin: 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     gap: 10px;
-    font-size: 16px;
-    color: white;
-    text-transform: capitalize;
-    font-family: Poppins;
-
 }
 
-/* ************* MOVIEW  1ST ROWS*************** */
+/* ************* MOVIE  ROWS*************** */
 
-.moviesWrappers1 {
+.moviesWrappers {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    color: white;
+    font-weight: 400px;
+}
+
+/* *************  MOVIE IMG WRAB *************** */
+
+.movieImgWrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 5px;
+    width: 160px;
+    height: auto;
+
 }
 
-/* *************  MOVIE IMG WRAB *************** */
+.movieImgWrapper {
+    font-size: 15px;
+    margin: 0;
+}
 
-.moviesWrappers1 .moviewrap {
+/* ************* MOVIEW  img ROWS*************** */
+
+.movieImgWrapper img {
     width: 100%;
     height: 100%;
-
-}
-
-/* ************* IMG MOVIES *************** */
-
-.moviesWrappers1 .moviewrap img {
-    width: 200px;
-    height: 240px;
-}
-
-/* ************* MOVIEW  2ND ROWS*************** */
-
-.moviesWrappers2 {
-    display: flex;
-    justify-content: center;
-    font-size: 16px;
-    color: white;
-    text-transform: capitalize;
-    font-family: Poppins;
-    padding-bottom: 5px;
-}
-
-/* *************  MOVIE IMG WRAB *************** */
-
-.moviesWrappers2 .moviewrap {
-    width: 100%;
-    height: 100%;
-
-}
-
-/* *************  MOVIE IMG  *************** */
-
-.moviesWrappers2 .moviewrap img {
-    width: 200px;
-    height: 240px;
 }

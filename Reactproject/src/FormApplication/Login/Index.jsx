@@ -8,6 +8,7 @@ function LoginIn() {
     const [email, setEmail] = useState("");
     const [notaccount, SetNotAccount] = useState(true)
     const [passworld, setPassworld] = useState("");
+    const [notPassword, SetNotPassword] = useState(true)
 
     // (############ Api fetch to sign in page #############) 
 
@@ -15,7 +16,7 @@ function LoginIn() {
         data: LoginData,
         loading: Loader,
         error: logInError
-    } = CustomApi({ url: "http://localhost:3000/Sign_In_Data" })
+    } = CustomApi({ url: "http://localhost:3000/Sign_Up_Data" })
 
     const handleEmail = (e) => {
         setEmail(e.target.value);
@@ -54,10 +55,10 @@ function LoginIn() {
             }
         }
         if (!found) {
-            return (SetNotAccount(false))
+            return (SetNotPassword(false))
         }
         else {
-            return (SetNotAccount(true))
+            return (SetNotPassword(true))
         }
     }
     //(####### Submite Functiom #########)
@@ -81,12 +82,15 @@ function LoginIn() {
         <>
             {
                 logInError ? <h2 className='Error'>404 {logInError}</h2> :
-                    Loader ? <img src={CircleLoad} alt="" srcset="" className="circleLoader" /> : <div className="login-Container">
+                    Loader ? <img src={CircleLoad} alt="" className="circleLoader" /> : <div className="login-Container">
                         <form action="" className='loginWrapper' onSubmit={handlesubmite}>
                             <h2>Login to your account</h2>
                             <div className="logincontent">
                                 {
-                                    notaccount ? <></> : ("NOT Match")
+                                    notaccount ? <></> : ("Account Not Created")
+                                }
+                                {
+                                    notPassword ? <></> : ("Password Not match")
                                 }
                                 <div className="LoginformWrapper">
                                     <label htmlFor="Email">Email</label>

@@ -1,5 +1,5 @@
 {
-  "Sign_In_Data": [
+  "Sign_Up_Data": [
     {
       "id": "7f7a",
       "email": "prathammahajan@gamil.com",
@@ -11,6 +11,18 @@
       "name": "Bhupendra",
       "email": "bhupendrpatil6639@gmail.com",
       "passworld": "bhupendra"
+    },
+    {
+      "id": "a48a",
+      "email": "yashpatil@gmail.com",
+      "passworld": "123456789",
+      "confirmPassworld": "123456789"
+    },
+    {
+      "id": "fded",
+      "email": "bharat6638@gmail.com",
+      "passworld": "12345678",
+      "confirmPassworld": "12345678"
     }
   ],
   "Login_Data": [
@@ -48,6 +60,85 @@
       "id": "789b",
       "email": "prathammahajan@gamil.com",
       "passworld": "bhupendra"
+    },
+    {
+      "id": "ef32",
+      "email": "prathammahajan@gamil.com",
+      "passworld": "bhupendra"
+    },
+    {
+      "id": "a8eb",
+      "email": "yashpatil@gmail.com",
+      "passworld": "123456789"
+    },
+    {
+      "id": "66a6",
+      "email": "yashpatil@gmail.com",
+      "passworld": "123456789"
+    },
+    {
+      "id": "6df3",
+      "email": "yashpatil@gmail.com",
+      "passworld": "123456789"
+    },
+    {
+      "id": "81ca",
+      "email": "bharat6638@gmail.com",
+      "passworld": "12345678"
+    },
+    {
+      "id": "d343",
+      "email": "yashpatil@gmail.com",
+      "passworld": "12345678"
+    },
+    {
+      "id": "1e03",
+      "email": "yashpatil@gmail.com",
+      "passworld": "12345678"
+    },
+    {
+      "id": "b03b",
+      "email": "yashpatil@gmail.com",
+      "passworld": "1234567"
+    },
+    {
+      "id": "a438",
+      "email": "yashpatil@gmail.com",
+      "passworld": "12345678"
+    }
+  ],
+  "movies_first_row": [
+    {
+      "id": 1,
+      "url": "public/MoviesSvg/image 1.svg",
+      "title": ""
+    },
+    {
+      "id": 2,
+      "url": "public/MoviesSvg/image 2.svg",
+      "title": ""
+    },
+    {
+      "id": 3,
+      "url": "public/MoviesSvg/image 3.svg",
+      "title": ""
+    },
+    {
+      "id": 4,
+      "url": "public/MoviesSvg/image 4.svg",
+      "title": ""
+    }
+  ],
+  "movies_second_row": [
+    {
+      "id": 1,
+      "url": "public/MoviesSvg/image 5.svg",
+      "title": ""
+    },
+    {
+      "id": 2,
+      "url": "public/MoviesSvg/image 6.svg",
+      "title": ""
     }
   ]
 }
