@@ -105,38 +105,43 @@
       "id": "a438",
       "email": "yashpatil@gmail.com",
       "passworld": "12345678"
+    },
+    {
+      "id": "4c6f",
+      "email": "yashpatil@gmail.com",
+      "passworld": "12345678"
     }
   ],
   "movies_first_row": [
     {
-      "id": 1,
+      "id": "1",
       "url": "public/MoviesSvg/image 1.svg",
       "title": ""
     },
     {
-      "id": 2,
+      "id": "2",
       "url": "public/MoviesSvg/image 2.svg",
       "title": ""
     },
     {
-      "id": 3,
+      "id": "3",
       "url": "public/MoviesSvg/image 3.svg",
       "title": ""
     },
     {
-      "id": 4,
+      "id": "4",
       "url": "public/MoviesSvg/image 4.svg",
       "title": ""
     }
   ],
   "movies_second_row": [
     {
-      "id": 1,
+      "id": "1",
       "url": "public/MoviesSvg/image 5.svg",
       "title": ""
     },
     {
-      "id": 2,
+      "id": "2",
       "url": "public/MoviesSvg/image 6.svg",
       "title": ""
     }

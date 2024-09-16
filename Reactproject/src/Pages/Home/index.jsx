@@ -1,11 +1,5 @@
-import "../Home/styles/Home.css"
+import "../Home/styles/Home.scss"
 import movie from "/Movie.svg"
-import movie1 from "/MoviesSvg/image 1.svg"
-import movie2 from "/MoviesSvg/image 2.svg"
-import movie3 from "/MoviesSvg/image 3.svg"
-import movie4 from "/MoviesSvg/image 4.svg"
-import movie5 from "/MoviesSvg/image 5.svg"
-import movie6 from "/MoviesSvg/image 6.svg"
 import CircleLoad from "/LoadingSvg/Circle.svg"
 import { Link } from "react-router-dom";
 import CustomApi from "../../CustomApi/CustomApi"

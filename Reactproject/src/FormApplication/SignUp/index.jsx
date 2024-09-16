@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import './Styles/SignIn.css'
+import './Styles/SignIn.scss'
 import { Link, useNavigate } from 'react-router-dom'
 import movies from '/Movie.svg'
 import CustomApi from "../../CustomApi/CustomApi";
@@ -85,16 +85,16 @@ function SignIn() {
             {
                 signInError ? <h2 className='Error'>404 {signInError}</h2> :
                     Loader ? <img src={CircleLoad} alt="" srcset="" className="circleLoader" /> :
-                        <div className="formContainer">
-                            <div className="cinemaTicket">
+                        <div className="signUPContainer">
+                            <div className="leftSection">
                                 <div className="SvgWrapperMovie">
                                     <img src={movies} alt="" />
                                 </div>
                                 <span>Welcome.<br></br>
                                     Begin your cinematic adventure now with our ticketing platform!</span>
                             </div>
-                            <div className="formcontent">
-                                <form action="" className="SignInSection" onSubmit={handlesubmite}>
+                            <div className="rightSection">
+                                <form action="" className="createAccount" onSubmit={handlesubmite}>
                                     <span>Create an account</span>
                                     {
                                         emailverified ? (email ? <small>Account alredy verified</small> : <></>) : <></>

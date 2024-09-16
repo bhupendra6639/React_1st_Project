@@ -1,0 +1,146 @@
+/* ************* HOME PAGE CONTAINER*************** */
+.logOutPage {
+    background: linear-gradient(27deg, #077b3a, #102a1c, #020700, #077b3a);
+    width: 100%;
+    height: 100vh;
+
+    /* ************* HOME PAGE HEADER*************** */
+
+    .movieNavigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1.5rem 0rem 1.5rem;
+        gap: 930px;
+
+        /* ************* HOME CINEMA LOGO SVG*************** */
+
+        .SvgWrapperMovie {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* ************* BUTTON NAVIGATION CONTAINER*************** */
+
+        .navregister {
+            display: flex;
+            gap: 15px;
+
+            /* ************* BUTTON HEADER *************** */
+
+            button {
+                font-size: 16px;
+                padding: 12px 20px;
+                border: none;
+                border-radius: 10px;
+            }
+
+            /* ************* lOGOUT BUTTON *************** */
+
+            .log-Out {
+                background: rgba(220, 0, 0, 1);
+            }
+
+            /* *************  ANCOL TAG *************** */
+
+            a {
+                color: white;
+            }
+
+            /* ************* TICKET BUTTON *************** */
+
+            .ticket {
+                background-color: transparent;
+                color: black;
+                padding: 5px 20px;
+
+                span {
+                    padding: 3px;
+                }
+            }
+
+        }
+
+    }
+
+    /* ************* MOVIE CONTAINER  *************** */
+
+    .logOutMovieContainer {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 8px;
+        text-align: center;
+        gap: 10px;
+
+        /* *************SHOW HEADING TEXT  *************** */
+
+        h2 {
+            text-transform: capitalize;
+            font-family: Poppins;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 46px;
+            color: rgba(255, 255, 255, 1);
+            margin: 0;
+            margin-bottom: 2px;
+        }
+
+        /* ************* MOVIES COLUMN IMGES CONTAINER *************** */
+        .moviesTemplates {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            /* ************* MOVIE  ROWS*************** */
+
+            .moviesWrappers {
+                display: flex;
+                justify-content: center;
+                gap: 25px;
+                color: white;
+                font-weight: 400px;
+
+                /* *************  MOVIE IMG WRAB *************** */
+
+                .movieImgWrapper {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 5px;
+                    width: 160px;
+                    height: auto;
+                    font-size: 15px;
+                    margin: 0;
+
+
+                    /* ************* MOVIEW  img ROWS*************** */
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+
+/********************  ERROR ********************/
+.Error {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: red;
+}
+
+/* ***************Circle Loader******************* */
+.circleLoader {
+    width: 300px;
+    position: absolute;
+    top: 200px;
+    left: 550px;
+}

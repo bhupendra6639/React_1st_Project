@@ -1,4 +1,4 @@
-import '../Login/Styles/Login.css'
+import '../Login/Styles/Login.scss'
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import CustomApi from '../../CustomApi/CustomApi';

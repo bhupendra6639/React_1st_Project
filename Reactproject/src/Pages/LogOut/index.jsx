@@ -1,12 +1,5 @@
-import "../LogOut/Styles/LogOut.css"
+import "../LogOut/Styles/LogOut.scss"
 import movie from "/Movie.svg"
-import movie1 from "/MoviesSvg/image 1.svg"
-import movie2 from "/MoviesSvg/image 2.svg"
-import movie3 from "/MoviesSvg/image 3.svg"
-import movie4 from "/MoviesSvg/image 4.svg"
-import movie5 from "/MoviesSvg/image 5.svg"
-import movie6 from "/MoviesSvg/image 6.svg"
-
 import CircleLoad from "/LoadingSvg/Circle.svg";
 import CustomApi from "../../CustomApi/CustomApi"
 
@@ -18,7 +11,6 @@ function LogOut() {
     } = CustomApi({ url: "http://localhost:3000/Sign_Up_Data" })
     const {
         data: movieImgUrl1st
-
     } = CustomApi({ url: "http://localhost:3000/movies_first_row" })
 
     const {
@@ -30,7 +22,7 @@ function LogOut() {
         <>
             {
                 loadError ? <h2 className='Error'>404{loadError}</h2> :
-                    homeLoader ? <img src={CircleLoad} alt="" className="circleLoader" /> : <div className="homePage">
+                    homeLoader ? <img src={CircleLoad} alt="" className="circleLoader" /> : <div className="logOutPage">
                         <div className="movieNavigation">
                             <div className="SvgWrapperMovie">
                                 <img src={movie} alt="" />
