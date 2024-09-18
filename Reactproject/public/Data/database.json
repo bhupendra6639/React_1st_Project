@@ -1,23 +1,6 @@
 {
-  "Sign_Up_Data": [
-    {
-      "id": "8661",
-      "email": "bhupendrapatil@gmail.com",
-      "passworld": "123456789"
-    }
-  ],
-  "Login_Data": [
-    {
-      "id": "8464",
-      "email": "bhupendrapatil@gmail.com",
-      "passworld": "123456789"
-    },
-    {
-      "id": "acb7",
-      "email": "bhupen6639@gmail.com",
-      "passworld": "123456789"
-    }
-  ],
+  "Sign_Up_Data": [],
+  "Login_Data": [],
   "movies_first_row": [
     {
       "id": "1",
