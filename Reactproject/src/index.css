@@ -4,8 +4,15 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
+    --text-black-primary: rgba(90, 90, 93, 1);
+    --text-black-ternory: black;
+    --border-color: rgba(190, 190, 191, 1);
+    --green-color: rgba(29, 231, 130, 1);
+    --white-color: white;
+    --button-disable: rgb(105 216 160)
 }
 
 a {
     text-decoration: none;
+    color: var(--green-color);
 }

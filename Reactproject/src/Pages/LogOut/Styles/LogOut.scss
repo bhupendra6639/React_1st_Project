@@ -10,7 +10,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1rem 1.5rem 0rem 1.5rem;
+        padding: 0.5rem 2rem 0rem 2rem;
         gap: 930px;
 
         /* ************* HOME CINEMA LOGO SVG*************** */
@@ -82,7 +82,8 @@
             line-height: 46px;
             color: rgba(255, 255, 255, 1);
             margin: 0;
-            margin-bottom: 2px;
+            margin-bottom: 4px;
+            margin-top: -15px;
         }
 
         /* ************* MOVIES COLUMN IMGES CONTAINER *************** */

@@ -1,115 +1,21 @@
 {
   "Sign_Up_Data": [
     {
-      "id": "7f7a",
-      "email": "prathammahajan@gamil.com",
-      "passworld": "bhupendra",
-      "confirmPassworld": "bhupendra"
-    },
-    {
-      "id": "1",
-      "name": "Bhupendra",
-      "email": "bhupendrpatil6639@gmail.com",
-      "passworld": "bhupendra"
-    },
-    {
-      "id": "a48a",
-      "email": "yashpatil@gmail.com",
-      "passworld": "123456789",
-      "confirmPassworld": "123456789"
-    },
-    {
-      "id": "fded",
-      "email": "bharat6638@gmail.com",
-      "passworld": "12345678",
-      "confirmPassworld": "12345678"
+      "id": "8661",
+      "email": "bhupendrapatil@gmail.com",
+      "passworld": "123456789"
     }
   ],
   "Login_Data": [
     {
-      "id": "aeae",
+      "id": "8464",
       "email": "bhupendrapatil@gmail.com",
-      "passworld": "bhupendra"
-    },
-    {
-      "id": "2e03",
-      "email": "prathammahajan@gamil.com",
-      "passworld": "12345678"
-    },
-    {
-      "id": "0abb",
-      "email": "prathammahajan@gamil.com",
-      "passworld": "12345678"
-    },
-    {
-      "id": "0dc9",
-      "email": "vishalpatil6639@gmail.com",
-      "passworld": "vishal6639"
-    },
-    {
-      "id": "ac4e",
-      "email": "vishalpatil@gmail.com",
-      "passworld": "vishaldada"
-    },
-    {
-      "id": "7ef5",
-      "email": "prathammahajan@gamil.com",
-      "passworld": "bhupendra"
-    },
-    {
-      "id": "789b",
-      "email": "prathammahajan@gamil.com",
-      "passworld": "bhupendra"
-    },
-    {
-      "id": "ef32",
-      "email": "prathammahajan@gamil.com",
-      "passworld": "bhupendra"
-    },
-    {
-      "id": "a8eb",
-      "email": "yashpatil@gmail.com",
       "passworld": "123456789"
     },
     {
-      "id": "66a6",
-      "email": "yashpatil@gmail.com",
+      "id": "acb7",
+      "email": "bhupen6639@gmail.com",
       "passworld": "123456789"
-    },
-    {
-      "id": "6df3",
-      "email": "yashpatil@gmail.com",
-      "passworld": "123456789"
-    },
-    {
-      "id": "81ca",
-      "email": "bharat6638@gmail.com",
-      "passworld": "12345678"
-    },
-    {
-      "id": "d343",
-      "email": "yashpatil@gmail.com",
-      "passworld": "12345678"
-    },
-    {
-      "id": "1e03",
-      "email": "yashpatil@gmail.com",
-      "passworld": "12345678"
-    },
-    {
-      "id": "b03b",
-      "email": "yashpatil@gmail.com",
-      "passworld": "1234567"
-    },
-    {
-      "id": "a438",
-      "email": "yashpatil@gmail.com",
-      "passworld": "12345678"
-    },
-    {
-      "id": "4c6f",
-      "email": "yashpatil@gmail.com",
-      "passworld": "12345678"
     }
   ],
   "movies_first_row": [

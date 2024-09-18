@@ -10,7 +10,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1rem 1.5rem 0rem 1.5rem;
+        padding: 0.5rem 2rem 0rem 2rem;
         gap: 930px;
 
         /* ************* HOME CINEMA LOGO SVG*************** */
@@ -64,9 +64,9 @@
     .homeMovieContainer {
         display: flex;
         flex-direction: column;
-        padding-bottom: 8px;
+        padding-bottom: 5px;
         text-align: center;
-        gap: 10px;
+        gap: 2px;
 
         /* *************SHOW HEADING TEXT  *************** */
 
@@ -78,10 +78,47 @@
             line-height: 46px;
             color: rgba(255, 255, 255, 1);
             margin: 0;
-            margin-bottom: 2px;
+            margin-bottom: 4px;
+            margin-top: -15px;
         }
     }
 
+    /* ************* MOVIES COLUMN IMGES CONTAINER *************** */
+    .moviesTemplates {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        /* ************* MOVIE  ROWS*************** */
+
+        .moviesWrappers {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            color: white;
+            font-weight: 400px;
+
+            /* *************  MOVIE IMG WRAB *************** */
+
+            .movieImgWrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 5px;
+                width: 160px;
+                height: auto;
+
+                /* ************* MOVIEW  img ROWS*************** */
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+
+            }
+
+        }
+
+    }
 }
 
 /********************  ERROR ********************/
@@ -100,43 +137,4 @@
     position: absolute;
     top: 200px;
     left: 550px;
-}
-
-
-
-/* ************* MOVIES COLUMN IMGES CONTAINER *************** */
-.moviesTemplates {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-
-    /* ************* MOVIE  ROWS*************** */
-
-    .moviesWrappers {
-        display: flex;
-        justify-content: center;
-        gap: 25px;
-        color: white;
-        font-weight: 400px;
-
-        /* *************  MOVIE IMG WRAB *************** */
-
-        .movieImgWrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
-            width: 160px;
-            height: auto;
-
-            /* ************* MOVIEW  img ROWS*************** */
-            img {
-                width: 100%;
-                height: 100%;
-            }
-
-        }
-
-    }
-
 }

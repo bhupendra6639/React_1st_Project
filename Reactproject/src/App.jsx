@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import SignIn from './FormApplication/SignUp'
+import SignIn from './FormApplication/SignUp/index'
 import LoginIn from './FormApplication/Login/Index'
 import Home from './Pages/Home'
 import LogOut from './Pages/LogOut'

@@ -2,12 +2,11 @@
 
 .signUPContainer {
     display: flex;
-    background-color: white;
+    background-color: var(--white-color);
     height: 100vh;
 
     /* ************  LeftSection Wrapper  Container ************** */
     .leftSection {
-        border: 1px solid black;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -53,6 +52,7 @@
             gap: 15px;
             color: rgba(90, 90, 93, 1);
             border-radius: 10px;
+            margin-left: 24px;
         }
 
         /* ************ span ************** */
@@ -78,24 +78,51 @@
             font-weight: 400;
             line-height: 16px;
             text-align: left;
+            border: none;
 
             input {
                 width: 400px;
                 height: 40px;
                 border-radius: 5px;
+                border: 1px solid var(--border-color);
+                color: var(--text-black-primary)
             }
 
+            .eyeWrappersvg {
+                position: relative;
+                display: flex;
+                align-items: center;
+
+                img {
+                    position: absolute;
+                    right: 5px;
+                    width: 20px;
+                }
+            }
+
+            &:active {
+                border: none;
+            }
+
+            /* ************ Sumbite  ************** */
+
+
+            .submite {
+                background: var(--green-color);
+                align-items: center;
+                color: var(--white-color);
+                font-weight: bold;
+                border: none;
+                font-size: 18px;
+                width: 100%;
+
+                &:disabled {
+                    background-color: var(--button-disable);
+                }
+            }
         }
 
-        /* ************ Sumbite  ************** */
 
-        .formWrapper .submite {
-            background: rgba(29, 231, 130, 1);
-            align-items: center;
-            color: rgba(90, 90, 93, 1);
-            border: none;
-            font-size: 18px;
-        }
 
     }
 

@@ -1,15 +1,37 @@
 import '../Login/Styles/Login.scss'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import CustomApi from '../../CustomApi/CustomApi';
 import CircleLoad from "/LoadingSvg/Infinity.svg"
-
+import Eye from "/eye.svg";
 function LoginIn() {
+    // const [email, setEmail] = useState("");
+    // const [passworld, setPassworld] = useState("");
+    // const [isdisabled, setIsDisabled] = useState(true);
     const [email, setEmail] = useState("");
-    const [notaccount, SetNotAccount] = useState(true)
     const [passworld, setPassworld] = useState("");
-    const [notPassword, SetNotPassword] = useState(true)
+    const [notaccountCreated, SetNotAccountCreated] = useState(true)
+    const [isdisabled, setIsDisabled] = useState(true);
+    const [isPasswordDisplay, setIsPasswordDisplay] = useState(true);
+    const [notPasswordmatch, SetNotPasswordMatch] = useState(true)
+    useEffect(() => {
+        if (email && passworld) {
+            // setIsDisabled(false)
+            for (let i = 0; i < LoginData.length; i++) {
+                if (LoginData[i].email === email && LoginData[i].passworld === passworld) {
+                    setIsDisabled(false);
+                }
+                else {
+                    setIsDisabled(true)
+                }
 
+            }
+
+        }
+        else {
+            setIsDisabled(true)
+        }
+    }, [email, passworld])
     // (############ Api fetch to sign in page #############) 
 
     const {
@@ -20,11 +42,10 @@ function LoginIn() {
 
     const handleEmail = (e) => {
         setEmail(e.target.value);
-        let temp = e.target.value;
         let found = false;
         for (let i = 0; i < LoginData.length; i++) {
             const keys = LoginData[i];
-            if (keys.email === temp) {
+            if (keys.email === e.target.value) {
                 found = true;
                 break;
             }
@@ -33,20 +54,19 @@ function LoginIn() {
             }
         }
         if (!found) {
-            return (SetNotAccount(false))
+            return (SetNotAccountCreated(false))
         }
         else {
-            return (SetNotAccount(true))
+            return (SetNotAccountCreated(true))
         }
     }
     // (#### passworld function############)
     const handlePassworld = (e) => {
         setPassworld(e.target.value)
-        let temp = e.target.value;
         let found = false;
         for (let i = 0; i < LoginData.length; i++) {
             const keys = LoginData[i];
-            if (keys.passworld === temp) {
+            if (keys.passworld === e.target.value && keys.email === email) {
                 found = true;
                 break;
             }
@@ -55,10 +75,10 @@ function LoginIn() {
             }
         }
         if (!found) {
-            return (SetNotPassword(false))
+            return (SetNotPasswordMatch(false))
         }
         else {
-            return (SetNotPassword(true))
+            return (SetNotPasswordMatch(true))
         }
     }
     //(####### Submite Functiom #########)
@@ -87,10 +107,7 @@ function LoginIn() {
                             <h2>Login to your account</h2>
                             <div className="logincontent">
                                 {
-                                    notaccount ? <></> : ("Account Not Created")
-                                }
-                                {
-                                    notPassword ? <></> : ("Password Not match")
+                                    email && !notaccountCreated && ("ERROR : Account not exit")
                                 }
                                 <div className="LoginformWrapper">
                                     <label htmlFor="Email">Email</label>
@@ -98,16 +115,20 @@ function LoginIn() {
                                 </div>
                                 <div className="LoginformWrapper">
                                     <label htmlFor="passworld">passworld</label>
-                                    <input type="password" name="password" minlength="8" required placeholder="Passworld" value={passworld} onChange={handlePassworld} />
+                                    <div className="eyeWrappersvg">
+                                        <input type={isPasswordDisplay ? "password" : "text"} name="password" minlength="8" required placeholder="Passworld" value={passworld} onChange={handlePassworld} />
+                                        <img src={Eye} alt="" onClick={() => setIsPasswordDisplay(!isPasswordDisplay)} />
+                                    </div>
                                 </div>
+                                {
+                                    passworld && !notPasswordmatch && ("ERROR : Password not match")
+                                }
                                 <div className="LoginformWrapper">
-                                    <input type="submit" className="submite" />
+                                    <input type="submit" className="submite" disabled={isdisabled} />
                                 </div>
-                                <div className="LoginformWrapper">
-                                    <ul>
-                                        <li>Don't have an account ?</li>
-                                        <li><Link to={"/register-Here"}>register Here</Link></li>
-                                    </ul>
+                                <div className="noteformWrapper">
+                                    <span>Don't have an account ?
+                                        <span><Link to={"/register-Here"}> register Here</Link></span></span>
                                 </div>
                             </div>
                         </form>

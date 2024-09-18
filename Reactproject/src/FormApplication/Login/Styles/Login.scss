@@ -8,16 +8,18 @@
     justify-content: center;
     align-items: center;
 
+
     /*************form Container ***********/
 
     .loginWrapper {
         text-transform: none;
-        background-color: white;
+        background-color: var(--white-color);
         display: flex;
         flex-direction: column;
+        justify-content: center;
         width: 450px;
         height: fit-content;
-        padding: 1rem 0rem 1rem 2rem;
+        padding: 2rem;
         border-radius: 10px;
         /*************Login Form Container ***********/
 
@@ -31,47 +33,78 @@
             text-align: left;
             color: rgba(90, 90, 93, 1);
 
+            .noteformWrapper {
+                text-align: center;
+            }
+
             /*************Login input Wrapper ***********/
 
             .LoginformWrapper {
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
+                text-transform: capitalize;
 
                 input {
-                    width: 400px;
+                    width: 100%;
                     height: 40px;
                     border-radius: 5px;
+                    border: 1px solid var(--border-color);
+                    color: var(--text-black-primary);
+                }
+
+                .eyeWrappersvg {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+
+                    img {
+                        position: absolute;
+                        right: 5px;
+                        width: 20px;
+                    }
+                }
+
+                &:active {
+                    border: none;
+                }
+
+
+                /*************Login to Submite ***********/
+                .submite {
+                    background: var(--green-color);
+                    align-items: center;
+                    color: var(--white-color);
+                    font-weight: bold;
+                    border: none;
+                    font-size: 18px;
+                    width: 100%;
+
+                    &:disabled {
+                        background-color: var(--button-disable);
+                    }
                 }
 
                 /*************Login List  ***********/
-                ul {
-                    /* text-align: center; */
-                    margin-top: 0px;
-                    margin-left: 10px;
-                }
+                // ul {
+                //     /* text-align: center; */
+                //     margin-top: 0px;
+                //     margin-left: 10px;
+                // }
 
-                ul li {
-                    display: inline;
-                    padding-left: 5px;
-                }
+                // ul li {
+                //     display: inline;
+                //     padding-left: 5px;
+                // }
 
-                ul li :first-child {
-                    padding: 0;
-                }
+                // ul li :first-child {
+                //     padding: 0;
+                // }
 
             }
 
         }
 
-        /*************Login to Submite ***********/
-        .submite {
-            background: rgba(29, 231, 130, 1);
-            align-items: center;
-            color: rgba(90, 90, 93, 1);
-            border: none;
-            font-size: 18px;
-        }
     }
 
 }
